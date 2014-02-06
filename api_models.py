@@ -186,7 +186,10 @@ class Khan():
     # Set authorization objects to prevent errors when checking for Auth.
 
     def __init__(self, lang=None):
-        self.lang = lang
+        if lang:
+            self.lang = lang
+        else:
+            self.lang = "en"
         self.REQUEST_TOKEN = None
         self.ACCESS_TOKEN = None
 
